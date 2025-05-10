@@ -1,5 +1,25 @@
-body{
-    background-color: #0a0f1f;
+body, html{
+    /* background-color: #0a0f1f; */
+    background: #1b1a1a;
+    font-family: "Roboto", sans-serif;
+}
+
+/* navbar */
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.navbar p{
+    color: white;
+    cursor: pointer;
+}
+
+.active{
+    color: #43a25a !important;
 }
 
 .content-scroll{
@@ -7,8 +27,7 @@ body{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
-    gap: 2px;
+    margin-top: 30px;
 }
 
 .content-scroll > * {
@@ -16,26 +35,78 @@ body{
   }
 
 .head-shot{
-    border-radius: 100%;
-    border: 1px solid white;
     margin-bottom: 20px;
 }
 
 .position-location{
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
+}
+
+.position-location span{
+    padding-left: 5px;
 }
 
 .title-5xl{
     color: white;
-    font-family: "Geist Mono", monospace;
     font-size: 2.25rem;
+    margin-bottom: -8px;
 }
 
 .title-3xl{
     color: gray;
-    font-family: "Geist Mono", monospace;
     font-size: 1.15rem;
-    font-weight: 100;
+    font-weight: 300;
+}
+
+/* social icons */
+
+.socials{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+
+.social-icon{
+    width: 30px;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: transform 0.3s ease, opacity 0.4s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2) rotate(5deg); /* 20% bigger, slight right tilt */
+  opacity: 1;
+}
+
+/* stack */
+
+.stack-preview {
+  width: 25%;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative;
+}
+
+.stack-track {
+  display: flex;
+  gap: 30px;
+  animation: scroll-left 14s linear infinite;
+  width: max-content;
+}
+
+.tech-icon {
+  height: 35px;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
