@@ -1,0 +1,41 @@
+body{
+    background-color: #0a0f1f;
+}
+
+.content-scroll{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    gap: 2px;
+}
+
+.content-scroll > * {
+    margin: 0;
+  }
+
+.head-shot{
+    border-radius: 100%;
+    border: 1px solid white;
+    margin-bottom: 20px;
+}
+
+.position-location{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-5xl{
+    color: white;
+    font-family: "Geist Mono", monospace;
+    font-size: 2.25rem;
+}
+
+.title-3xl{
+    color: gray;
+    font-family: "Geist Mono", monospace;
+    font-size: 1.15rem;
+    font-weight: 100;
+}
