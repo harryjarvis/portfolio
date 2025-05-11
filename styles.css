@@ -7,20 +7,51 @@ body, html{
 /* navbar */
 
 .navbar{
+    top: 0;
+    z-index: 1000;
+    background-color: rgba(27,26,26,0.4);
+    position: sticky;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 15px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .navbar p{
     color: white;
     cursor: pointer;
+    min-width: 62px;
+    max-width: 62px;
+    overflow: hidden;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 1rem;
 }
 
 .active{
     color: #43a25a !important;
 }
+
+/* lang button */
+
+.lang-btn{
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: none;
+  padding: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.lang-btn img{
+  width: 100%;
+  border-radius: 50%;
+}
+
+/* main content div */
 
 .content-scroll{
     display: flex;
@@ -28,11 +59,21 @@ body, html{
     flex-direction: column;
     align-items: center;
     margin-top: 30px;
+    overflow: scroll;
 }
 
 .content-scroll > * {
     margin: 0;
   }
+
+.content-scroll hr{
+  border: 0;
+  border: 1px solid rgb(70, 70, 70);
+  margin: 20px auto;
+  width: 65%;
+}
+
+/* */
 
 .head-shot{
     margin-bottom: 20px;
@@ -43,6 +84,11 @@ body, html{
     align-items: center;
     gap: 10px;
 }
+/*
+.position-location img{
+   can change color using this filter: invert(8%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
+} 
+  */
 
 .position-location span{
     padding-left: 5px;
@@ -58,6 +104,19 @@ body, html{
     color: gray;
     font-size: 1.15rem;
     font-weight: 300;
+}
+
+.title-2xl{
+  color: rgb(168, 168, 168);
+  margin-top: 15px;
+  font-size: 1.15rem;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+}
+
+.pointer{
+  cursor: pointer;
 }
 
 /* social icons */
@@ -83,30 +142,23 @@ body, html{
 
 /* stack */
 
-.stack-preview {
-  width: 25%;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 20px 0;
-  position: relative;
+.stack{
+  text-align: center;
+  margin: 0;
 }
 
-.stack-track {
-  display: flex;
-  gap: 30px;
-  animation: scroll-left 14s linear infinite;
-  width: max-content;
+.stack p{
+  color: lightgray;
+  font-size: 1.75rem;
+  margin: 0;
+  margin-top: 15px !important;
 }
 
-.tech-icon {
-  height: 35px;
-}
-
-@keyframes scroll-left {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+.stack img{
+  width: 30px;
+  display: inline-block;
+  margin: 3px;
+  flex-direction: row;
+  margin-top: 10px;
+  cursor: pointer;
 }
