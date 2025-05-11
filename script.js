@@ -19,6 +19,7 @@ const translations = {
             <br style='margin: 4px;'><span style='color: #43a25a;'>experiences</span>
             and cool other stuff. You can grab a copy of my resume <span class="pointer" style='color: #43a25a; text-decoration: underline;'>here.</span>`,
         stack: "stack<span style='font-size: 0.7rem;'>(wip)</span>",
+        copied: "copied!",
     },
     es: {
       about: "sobre",
@@ -29,8 +30,9 @@ const translations = {
             <br style='margin: 4px;'>
             Este es mi portafolio y sitio web personal, con todo mi <span style='color: #43a25a;'>trabajo</span>, 
             <br style='margin: 4px;'><span style='color: #43a25a;'>experiencia</span>
-            y otras cosas geniales. Puedes obtener una copia de mi currículum <span class="pointer" style='color: #43a25a; text-decoration: underline;'>aquí.</span>`,
+            y otras cosas geniales. Puedes obtener una copia de mi currículum <a href="/resume.pdf"><span class="pointer" style='color: #43a25a; text-decoration: underline;'>aquí.</span></a>`,
       stack: "stack tecnológico<span style='font-size: 0.7rem;'>(wip)</span>",
+      copied: "¡Copiado!",
     },
     fr: {
       about: "à propos",
@@ -43,8 +45,9 @@ const translations = {
             <br style='margin: 4px;'>
             Ceci est mon portfolio et site personnel, avec tout mon <span style='color: #43a25a;'>travail</span>,
             <br style='margin: 4px;'><span style='color: #43a25a;'>expérience</span>
-            et d'autres choses intéressantes. Vous pouvez obtenir une copie de mon CV <span class="pointer" style='color: #43a25a; text-decoration: underline;'>ici.</span>`,
+            et d'autres choses intéressantes. Vous pouvez obtenir une copie de mon CV <a href="/resume.pdf"><span class="pointer" style='color: #43a25a; text-decoration: underline;'>ici.</span></a>`,
     stack: "stack technologique<span style='font-size: 0.7rem;'>(wip)</span>",
+    copied: "Copié!",
     },
   };
   
@@ -63,3 +66,35 @@ button.addEventListener("click", () => {
   flagIcon.src = `flags/${flags[currentIndex]}`;
   updateText(lang);
 });
+
+// Email Clipboard API script
+
+  function copyEmail() {
+    const email = "harryjarvis32@gmail.com"; // Stored only in JS
+
+    // Use Clipboard API if available
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(email).then(() => {
+        showCopiedMessage();
+      }).catch(err => {
+        console.error("Clipboard write failed", err);
+      });
+    } else {
+      // Fallback for older browsers
+      const tempInput = document.createElement("input");
+      tempInput.value = email;
+      document.body.appendChild(tempInput);
+      tempInput.select();
+      document.execCommand("copy");
+      document.body.removeChild(tempInput);
+      showCopiedMessage();
+    }
+  }
+
+  function showCopiedMessage() {
+    const msg = document.querySelector(".email-popup");
+    msg.style.display = "block";
+    setTimeout(() => {
+      msg.style.display = "none";
+    }, 1500);
+  }

@@ -1,7 +1,7 @@
 body, html{
     /* background-color: #0a0f1f; */
     background: #1b1a1a;
-    font-family: "Roboto", sans-serif;
+    font-family: "Josefin Sans", sans-serif;
 }
 
 /* navbar */
@@ -22,12 +22,12 @@ body, html{
 .navbar p{
     color: white;
     cursor: pointer;
-    min-width: 62px;
-    max-width: 62px;
+    min-width: 75px;
+    max-width: 75px;
     overflow: hidden;
     text-align: center;
     white-space: nowrap;
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .active{
@@ -102,15 +102,15 @@ body, html{
 
 .title-3xl{
     color: gray;
-    font-size: 1.15rem;
-    font-weight: 300;
+    font-size: 1.3rem;
+    font-weight: 400;
 }
 
 .title-2xl{
   color: rgb(168, 168, 168);
   margin-top: 15px;
   font-size: 1.15rem;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
   text-align: center;
 }
@@ -140,6 +140,29 @@ body, html{
   opacity: 1;
 }
 
+/* email copy styling */
+
+.email-item{
+  position: relative;
+  display: inline-block;
+}
+
+.email-popup{
+  display: none;
+  position: absolute;
+  bottom: -20%;
+  left: 250%;
+  color: white;
+  transform: translateX(-50%);
+  background-color: rgb(43, 43, 43);
+  padding: 10px 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  z-index: 10;
+}
+
 /* stack */
 
 .stack{
@@ -147,18 +170,48 @@ body, html{
   margin: 0;
 }
 
-.stack p{
+.stack h1{
   color: lightgray;
-  font-size: 1.75rem;
+  font-weight: 600;
+  font-size: 2rem;
   margin: 0;
   margin-top: 15px !important;
 }
 
 .stack img{
   width: 30px;
+  height: auto;
   display: inline-block;
   margin: 3px;
   flex-direction: row;
   margin-top: 10px;
   cursor: pointer;
 }
+
+.stack-item{
+  display: inline-block;
+  position: relative;
+  margin: 0 5px;
+}
+
+.stack-popup{
+  display: none;
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  color: white;
+  transform: translateX(-50%);
+  background-color: rgb(43, 43, 43);
+  padding: 10px 10px;
+  font-size: 1rem;
+  white-space: nowrap;
+  margin-bottom: 5px;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.stack-item:hover .stack-popup{
+  display: block;
+}
+
+/* end of stack */
