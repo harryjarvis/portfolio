@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valentine’s</title>
+
+    <!-- Helps keep it out of Google -->
+    <meta name="robots" content="noindex, nofollow" />
+
+    <style>
+        html, body {
+        height: 100%;
+        margin: 0;
+        }
+
+        body {
+        display: grid;
+        place-items: center;
+        background: #fff;
+        }
+
+        .contents {
+        display: flex;
+        flex-direction: column;
+        align-items: center;   /* centers p + buttons */
+        gap: 12px;             /* controls spacing between items */
+        }
+
+        img {
+        max-width: min(300px, 80vw);
+        height: auto;
+        display: block;
+        }
+
+        p {
+        margin: 0;             /* removes default paragraph margin */
+        text-align: center;
+        font-size: 1rem;
+        }
+
+        .buttons {
+        display: flex;
+        gap: 12px;
+        }
+
+        button {
+        font-size: 0.8rem;
+        cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+  
+    <div class="contents">
+    <img id="valGif" src="./images/minion-minion-loves.gif" alt="Minion LOVE" />
+    <p id="valText">Will you be my valentine?</p>
+
+    <div class="buttons" id="valButtons">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+    </div>
+
+    <script src="./valentines.js"></script>
+
+  </body>
+</html>
