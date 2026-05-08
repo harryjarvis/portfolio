@@ -1,0 +1,125 @@
+/* projects.css */
+
+body,
+html {
+  background: #1b1a1a;
+  font-family: "Geist Mono", monospace;
+  --green: #43a25a;
+  margin: 0;
+  color: rgb(168, 168, 168);
+}
+
+.projects-wrapper {
+  max-width: 650px;
+  margin: 60px auto;
+  padding: 0 30px;
+  animation: fadeIn 0.45s ease;
+}
+
+.back-link {
+  color: gray;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-underline-offset: 4px;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: var(--green);
+}
+
+.projects-header {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.projects-header h1 {
+  color: white;
+  font-size: 1.75rem;
+  margin: 0 0 10px;
+}
+
+.projects-header p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.project-card {
+  border-left: 2px solid var(--green);
+  padding-left: 18px;
+}
+
+.project-card h2 {
+  color: white;
+  font-size: 1.05rem;
+  margin: 0 0 12px;
+  font-weight: 500;
+}
+
+.project-tech {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.tech-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.tech-icon:hover {
+  transform: translateY(-2px);
+}
+
+.tech-icon svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.project-concepts {
+  color: var(--green);
+  font-size: 0.78rem;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.project-description {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.project-links a {
+  color: gray;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-underline-offset: 4px;
+}
+
+.project-links a:hover {
+  color: var(--green);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -37,8 +37,9 @@ body, html {
 
 /* Profile Image */
 .head-shot {
-    width: 125px;
+    width: 140px;
     margin: 20px 20px 0 0;
+    transform: translateX(20px);
 }
 
 /* Responsive */
@@ -136,6 +137,12 @@ body, html {
     display: inline-block;
     position: relative;
     margin-right: 4px;
+    cursor: pointer;
+}
+
+.stack-item2 {
+    display: inline-block;
+    position: relative;
     cursor: pointer;
 }
 
