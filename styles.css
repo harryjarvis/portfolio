@@ -130,7 +130,7 @@ body, html {
 
 /* Stack */
 .stack {
-    margin-top: 5px;
+    margin: 15px 0 0 6px;
 }
 
 .stack-item {
@@ -160,4 +160,87 @@ body, html {
 
 .stack-item:hover .stack-popup {
     display: block;
+}
+
+.terminal-blink {
+  color: var(--green);
+  font-size: 1rem;
+  font-family: "Geist Mono", monospace;
+  animation: blink 1s step-start infinite;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 9px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.currently-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  margin: 10px 0;
+  width: 100%;
+}
+
+.currently {
+    margin-left: 6px;
+}
+
+.currently-label {
+  color: var(--green);
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+
+.currently-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.currently-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  font-size: 0.88rem;
+}
+
+.row-key {
+  color: rgba(168, 168, 168, 0.5);
+  min-width: 72px;
+  flex-shrink: 0;
+  font-size: 0.78rem;
+}
+
+.row-val {
+  color: rgb(168, 168, 168);
+  line-height: 1.5;
+}
+
+.row-val a {
+  color: rgb(168, 168, 168);
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+  text-underline-offset: 3px;
 }
