@@ -140,12 +140,6 @@ body, html {
     cursor: pointer;
 }
 
-.stack-item2 {
-    display: inline-block;
-    position: relative;
-    cursor: pointer;
-}
-
 .stack img {
     width: 30px;
     cursor: pointer;
