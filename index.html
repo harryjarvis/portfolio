@@ -23,11 +23,12 @@
           <h3 class="title-3xl">manchester, uk</h3>
           <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="-2 -1 24 24"><path fill="#43a25a" d="M17 3.34A10 10 0 1 1 2 12l.005-.324A10 10 0 0 1 17 3.34m-.086 5.066c.372-.837-.483-1.692-1.32-1.32l-9 4l-.108.055c-.75.44-.611 1.609.271 1.83l3.418.853l.855 3.419c.23.922 1.498 1.032 1.884.163z"/></svg>
         </div>
+        <p class="local-time" id="local-time"></p>
       </div>
 
       <div class="headshot-outer">
         <div class="headshot-wrapper">
-          <img src="./images/Headshot.jpg" class="head-shot" alt="Harry Jarvis" />
+          <img src="./images/updated-headshot.png" class="head-shot" alt="Harry Jarvis" />
         </div>
         <span class="headshot-dot" style="background: #666666;"></span>
       </div>
@@ -154,11 +155,11 @@
 
 <div class="currently">
   <div class="currently-label">
-    <span class="dot" style="background: #666666;"></span>
-    <span class="currently-text" style="color: #666666;"></span>
+    <span class="dot"></span>
+    <span class="currently-text">currently</span>
   </div>
 
-  <div class="currently-rows" style="display: none;">
+  <div class="currently-rows">
     <div class="currently-row">
       <span class="row-key">building</span>
       <span class="row-val">a python / sql project</span>
@@ -179,5 +180,12 @@
   </div>
 
   <script src="script.js"></script>
+
+  <div class="photo-modal" id="photo-modal" onclick="closeModal()">
+  <div class="photo-modal-inner" onclick="event.stopPropagation()">
+    <img src="./images/updated-headshot.png" alt="Harry Jarvis" />
+    <p>tedxmanchester, 2024</p>
+  </div>
+</div>
 </body>
 </html>
