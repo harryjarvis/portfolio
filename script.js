@@ -28,15 +28,22 @@ const statusMap = {
   offline: "#666666",
 };
 
+let currentStatusColor = "#666666";
+
 async function updateDiscordStatus() {
   const headshotDot = document.querySelector(".headshot-dot");
+  const headshotWrapper = document.querySelector(".headshot-wrapper");
   try {
     const res = await fetch(`https://api.lanyard.rest/v1/users/${DISCORD_ID}`);
     const data = await res.json();
     const status = data.data.discord_status;
-    headshotDot.style.background = statusMap[status] || "#666666";
+    currentStatusColor = statusMap[status] || "#666666";
+    headshotDot.style.background = currentStatusColor;
+    headshotWrapper.style.setProperty("--status-color", currentStatusColor);
   } catch (e) {
-    headshotDot.style.background = "#666666";
+    currentStatusColor = "#666666";
+    headshotDot.style.background = currentStatusColor;
+    headshotWrapper.style.setProperty("--status-color", currentStatusColor);
   }
 }
 
@@ -53,6 +60,9 @@ function updateLocalTime() {
   document.getElementById("local-time").textContent = `${time} local time`;
 }
 
+updateLocalTime();
+setInterval(updateLocalTime, 1000);
+
 document.querySelector(".headshot-outer").addEventListener("click", () => {
   document.getElementById("photo-modal").classList.add("open");
 });
@@ -64,6 +74,3 @@ function closeModal() {
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape") closeModal();
 });
-
-updateLocalTime();
-setInterval(updateLocalTime, 1000);

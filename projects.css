@@ -1,167 +1,214 @@
 /* projects.css */
-
-body,
-html {
-  background: #1b1a1a;
-  font-family: "Geist Mono", monospace;
-  --green: #43a25a;
-  margin: 0;
-  color: rgb(168, 168, 168);
+body, html {
+    background: #1b1a1a;
+    font-family: "Geist Mono", monospace;
+    --green: #43a25a;
+    margin: 0;
+    color: rgb(168, 168, 168);
 }
 
 .projects-wrapper {
-  max-width: 650px;
-  margin: 60px auto;
-  padding: 0 30px;
-  animation: fadeIn 0.45s ease;
+    max-width: 650px;
+    margin: 60px auto;
+    padding: 0 30px;
+    animation: fadeIn 0.45s ease;
 }
 
 .back-link {
-  color: gray;
-  text-decoration: underline;
-  text-decoration-color: var(--green);
-  text-underline-offset: 4px;
-  font-size: 0.9rem;
+    color: gray;
+    text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-underline-offset: 4px;
+    font-size: 0.9rem;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .back-link:hover {
-  color: var(--green);
+    color: white;
+    text-decoration-color: white;
+    text-decoration: underline;
 }
 
 .projects-header {
-  margin-top: 40px;
-  margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .projects-header h1 {
-  color: white;
-  font-size: 1.75rem;
-  margin: 0 0 10px;
+    color: white;
+    font-size: 1.75rem;
+    margin: 0 0 10px;
 }
 
 .projects-header p {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 .projects-list {
-  display: flex;
-  flex-direction: column;
-  gap: 36px;
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
 }
 
 .project-card {
-  position: relative;
-  cursor: pointer;
-  overflow: hidden;
-  border-left: 2px solid var(--green);
-  padding: 24px 18px;
-  background: rgba(255, 255, 255, 0.015);
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    border-left: 2px solid var(--green);
+    padding: 24px 18px;
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .project-card h2 {
-  color: white;
-  font-size: 1.05rem;
-  margin: 0 0 12px;
-  font-weight: 500;
-  cursor: pointer;
+    color: white;
+    font-size: 1.05rem;
+    margin: 0 0 12px;
+    font-weight: 500;
+    cursor: pointer;
 }
 
 .project-tech {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
 }
 
 .tech-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.2s ease;
-  cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease;
+    cursor: pointer;
 }
 
 .tech-icon:hover {
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
 .tech-icon svg {
-  width: 22px;
-  height: 22px;
-  display: block;
+    width: 22px;
+    height: 22px;
+    display: block;
 }
 
 .project-concepts {
-  color: var(--green);
-  font-size: 0.78rem;
-  line-height: 1.6;
-  margin: 0 0 10px;
-  cursor: pointer;
+    color: var(--green);
+    font-size: 0.78rem;
+    line-height: 1.6;
+    margin: 0 0 10px;
+    cursor: pointer;
 }
 
 .project-description {
-  font-size: 0.88rem;
-  line-height: 1.7;
-  margin: 0 0 12px;
-  cursor: pointer;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin: 0 0 12px;
+    cursor: pointer;
+}
+
+.project-links {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 .project-links a {
-  color: var(--green);
-  font-size: 0.85rem;
-  text-decoration: underline;
-  text-decoration-color: var(--green);
-  text-underline-offset: 4px;
-  transition: font-size 0.2s ease;
+    color: var(--green);
+    font-size: 0.85rem;
+    text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-underline-offset: 4px;
+    transition: color 0.2s ease, text-decoration-color 0.2s ease;
 }
 
 .project-links a:hover {
-  font-size: 1rem;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(14px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    color: white;
+    text-decoration-color: white;
 }
 
 .project-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image: var(--bg-image);
-  background-size: cover;
-  background-position: var(--bg-position, center);
-  opacity: 0.5;
-  filter: blur(2px);
-  transform: scale(1.04);
-  z-index: 0;
-  transition: opacity 0.25s ease, transform 0.25s ease;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: var(--bg-image);
+    background-size: cover;
+    background-position: var(--bg-position, center);
+    opacity: 0.5;
+    filter: blur(2px);
+    z-index: 0;
+    transition: opacity 0.25s ease, filter 0.25s ease;
 }
 
 .project-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(27, 26, 26, 0.78);
-  z-index: 1;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(27, 26, 26, 0.78);
+    z-index: 1;
 }
 
 .project-card > * {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .project-card:hover::before {
-  opacity: 0.8;
-  filter: blur(0px);
-  transform: scale(1.15);
+    opacity: 0.8;
+    filter: blur(0px);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(14px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+    .projects-wrapper {
+        margin: 36px auto;
+        padding: 0 20px;
+    }
+
+    .projects-header {
+        margin-top: 28px;
+        margin-bottom: 28px;
+    }
+
+    .projects-header h1 {
+        font-size: 1.4rem;
+    }
+
+    .projects-header p {
+        font-size: 0.85rem;
+    }
+
+    .projects-list {
+        gap: 24px;
+    }
+
+    .project-card {
+        padding: 18px 14px;
+    }
+
+    .project-card h2 {
+        font-size: 0.95rem;
+    }
+
+    .project-description {
+        font-size: 0.83rem;
+    }
+
+    .project-concepts {
+        font-size: 0.75rem;
+    }
 }
